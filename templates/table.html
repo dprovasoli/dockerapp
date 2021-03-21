@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+</head>
+<body>
+<div class="content">        
+    <div class="container"> 
+      <h2 class="text-center"><u>Country Data</u></h2><br>             
+      <table class="table"> 
+        <thead> 
+          <tr> 
+            <th>country</th> 
+            <th>latitude</th> 
+            <th>longitude</th> 
+            <th>name</th> 
+          </tr> 
+        </thead> 
+        <tbody> 
+        <!-- jinja2 Technique -->
+        {% if d %}   
+        {% for i in d %} 
+          <tr> 
+            <td>{{i.country}}</td> 
+            <td>{{i.latitude}}</td> 
+            <td>{{i.longitude}}</td> 
+            <td>{{i.tipologia}}</td> 
+            <td>{{i.name}}</td>
+          </tr> 
+        {% endfor %} 
+        {% endif %} 
+        </tbody> 
+      </table> 
+    </div> 
+  </div>
+
+</body>
+</html>
